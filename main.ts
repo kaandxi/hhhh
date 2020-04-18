@@ -1,5 +1,5 @@
 scene.setBackgroundColor(1)
-let mySprite = sprites.create(img`
+let 英雄 = sprites.create(img`
 . . . . . . . . . f f f f f f f . . . . . . . . . 
 . . . . . . . . f c c b b b b b f . . . . . . . . 
 . . . . . . . f c c b b b b c b b f . . . . . . . 
@@ -31,3 +31,6 @@ f d d d f . f f f f f 2 2 2 f f f f f . f d d d f
 . . . . f e e e e e e f . f e e e e e e f . . . . 
 . . . . f f f f f f f . . . f f f f f f f . . . . 
 `, SpriteKind.Player)
+英雄.setPosition(80, 90)
+controller.moveSprite(英雄, 100, 0)
+英雄.setFlag(SpriteFlag.StayInScreen, true)
